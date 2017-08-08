@@ -71,7 +71,7 @@ async function main(){
 
   const newsletter = new EmailTemplate(templateDir)
   newsletter.render(templateContext, function (err, result) {
-    // require('fs').writeFileSync('example.html', result.html)
+    // require('fs').writeFileSync('docs/index.html', result.html)
     sendDigestEmail({ html: result.html })
   })
 }
