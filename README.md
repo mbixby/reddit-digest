@@ -14,6 +14,6 @@ See [docs/index.html](https://mbixby.github.io/reddit-digest/) for an example.
   - if using Google Mail, go to Settings > Filters, search by `bot@redditdigest.com` sender and create a filter to never send it to spam
 4. read the code in `index.js` to make sure I don't install a keylogger on your system
   - it's fine, you probably have one already anyway
-4. run `node index.js` to test
+5. run `node index.js` to test
 
 Star the project if you want to make this easy to use.
