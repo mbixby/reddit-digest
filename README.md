@@ -2,7 +2,7 @@
 
 Send yourself a weekly email with top posts from your selected subreddits.
 
-See example.html for the output.
+See [docs/index.html](https://mbixby.github.io/reddit-digest/) for an example.
 
 ## Setup
 
