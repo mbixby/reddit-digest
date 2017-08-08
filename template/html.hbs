@@ -1,0 +1,46 @@
+<div class="markdown-body">
+  <p>{{currentDate}}</p>
+
+  {{#each sections as |section|}}
+    <hr>
+    {{#each section as |topPosts|}}
+      <h3 style="margin-bottom: 1em;">{{@key}}</h3>
+      <ul>
+        {{#each topPosts.data.children as |post|}}
+          <li>
+            <a href="{{post.data.url}}">{{post.data.title}}</a>
+            
+            &nbsp;&#8679;<strong>{{post.data.score}}</strong>
+            
+            &nbsp;
+            <a href="https://www.reddit.com{{post.data.permalink}}">
+              {{post.data.num_comments}}&nbsp;comments
+            </a>
+            
+            {{#if post.data.imageUrl }}
+              <p><img src="{{post.data.imageUrl}}" style="max-width: 500px; max-height: 500px"></p>
+            {{/if}}
+
+            <p>{{post.data.selftext}}</p>
+          </li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  {{/each}}
+
+  <hr>
+  
+  {{#each pics.data.children as |post|}}
+    <li>
+      <a href="{{post.data.url}}">{{post.data.title}}</a>
+      &nbsp;&#8679;<strong>{{post.data.score}}</strong>
+
+      &nbsp;
+      <a href="https://www.reddit.com{{post.data.permalink}}">
+        {{post.data.num_comments}}&nbsp;comments
+      </a>
+
+      <p><img src="{{post.data.imageUrl}}" style="max-width: 600px; max-height: 600px"></p>
+    </li>
+  {{/each}}
+</div>
